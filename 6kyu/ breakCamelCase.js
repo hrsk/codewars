@@ -9,7 +9,33 @@
 // ""             =>  ""
 
 function solution(string) {
-    return ""
+
+    const letters = []
+    for (let i = 0; i < string.split('').length; i++) {
+        if (string.split('')[i] === string.split('')[i].toUpperCase()) {
+            letters.push(string.split('')[i])
+        }
+    }
+
+    if (!letters.length) return string
+
+    let result = "";
+
+    for (const char of string) {
+        if (letters.includes(char)) {
+            result += " " + char;
+        } else {
+            result += char;
+        }
+    }
+    return result
+
+    //second solution
+
+    // return string
+    //     .split("")
+    //     .map(char => (letters.includes(char) ? " " + char : char))
+    //     .join("");
 
 }
 
