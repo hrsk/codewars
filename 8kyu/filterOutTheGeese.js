@@ -20,6 +20,19 @@ function gooseFilter(birds) {
 
 
     return birds.filter(bird => !geese.includes(bird));
+
+    // return birds.filter( bird => geese.indexOf(bird) < 0 );
+
+    // const result = [];
+    // for (let i = 0; i < birds.length; i++) {
+    //     if (!geese.includes(birds[i])) {
+    //         result.push(birds[i]);
+    //     }
+    //
+    //
+    // }
+    // return result;
+
 }
 
 console.log(gooseFilter(["Mallard", "Hook Bill", "African", "Crested", "Pilgrim", "Toulouse", "Blue Swedish"])) // ["Mallard", "Hook Bill", "Crested", "Blue Swedish"]
